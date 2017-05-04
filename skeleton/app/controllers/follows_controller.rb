@@ -4,7 +4,7 @@ class FollowsController < ApplicationController
   def create
     # simulate latency
     sleep(1)
-    
+    # debugger
     @follow = current_user.out_follows.create!(followee_id: params[:user_id])
 
     respond_to do |format|
